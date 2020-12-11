@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IeL-kg-mOx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--typeModel-->
+        <scene sceneID="vjF-LI-cEg">
+            <objects>
+                <viewController storyboardIdentifier="typeModel" title="typeModel" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IeL-kg-mOx" customClass="typeModelViewController" customModule="FipeMVVMExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3i9-bz-ni4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="llH-Lc-Mok">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="carInfoCell" rowHeight="61" id="KFM-dU-OhN" customClass="carInfoTableViewCell" customModule="FipeMVVMExercise" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KFM-dU-OhN" id="56S-PY-EQ3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model Car Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cco-T6-68i">
+                                                    <rect key="frame" x="28" y="19" width="350" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="cco-T6-68i" secondAttribute="trailing" constant="16" id="2nj-EI-OtI"/>
+                                                <constraint firstItem="cco-T6-68i" firstAttribute="leading" secondItem="56S-PY-EQ3" secondAttribute="leadingMargin" constant="8" id="FKK-Qe-8nI"/>
+                                                <constraint firstItem="cco-T6-68i" firstAttribute="top" secondItem="56S-PY-EQ3" secondAttribute="topMargin" constant="8" id="FNz-Wv-eWw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cco-T6-68i" secondAttribute="bottom" constant="8" id="GhH-QX-C16"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="cco-T6-68i" id="19z-vj-PhD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ne3-Xx-Afy" firstAttribute="trailing" secondItem="llH-Lc-Mok" secondAttribute="trailing" id="JUZ-9C-kw0"/>
+                            <constraint firstItem="llH-Lc-Mok" firstAttribute="top" secondItem="Ne3-Xx-Afy" secondAttribute="top" id="WjA-8r-Edq"/>
+                            <constraint firstItem="llH-Lc-Mok" firstAttribute="leading" secondItem="Ne3-Xx-Afy" secondAttribute="leading" id="qnJ-kb-Qs2"/>
+                            <constraint firstItem="Ne3-Xx-Afy" firstAttribute="bottom" secondItem="llH-Lc-Mok" secondAttribute="bottom" id="qyj-Ma-MKj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ne3-Xx-Afy"/>
+                    </view>
+                    <connections>
+                        <outlet property="typeModelTableView" destination="llH-Lc-Mok" id="kRV-9d-wFM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAf-h7-fof" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-717.39130434782612" y="90.401785714285708"/>
+        </scene>
+    </scenes>
+</document>

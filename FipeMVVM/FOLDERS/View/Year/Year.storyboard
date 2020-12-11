@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XQe-7M-zxc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Year-->
+        <scene sceneID="xaB-1N-d02">
+            <objects>
+                <viewController storyboardIdentifier="Year" title="Year" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XQe-7M-zxc" customClass="YearViewController" customModule="FipeMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BrF-iz-C4k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sAh-BN-w3y">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="yearInfo" id="zN7-fs-XMO" customClass="YearTableViewCell" customModule="FipeMVVM" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zN7-fs-XMO" id="1sL-dx-88w">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YEAR LABEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etH-fD-wnH">
+                                                    <rect key="frame" x="28" y="19" width="350" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="etH-fD-wnH" secondAttribute="trailing" constant="16" id="4SB-fH-ZkD"/>
+                                                <constraint firstItem="etH-fD-wnH" firstAttribute="leading" secondItem="1sL-dx-88w" secondAttribute="leadingMargin" constant="8" id="Gxf-Yu-2BU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="etH-fD-wnH" secondAttribute="bottom" constant="8" id="ae2-De-hmh"/>
+                                                <constraint firstItem="etH-fD-wnH" firstAttribute="top" secondItem="1sL-dx-88w" secondAttribute="topMargin" constant="8" id="fl1-Qx-WF5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="etH-fD-wnH" id="lf8-TT-QBT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sAh-BN-w3y" firstAttribute="top" secondItem="tzY-29-gio" secondAttribute="top" id="2wv-hV-fPX"/>
+                            <constraint firstItem="tzY-29-gio" firstAttribute="trailing" secondItem="sAh-BN-w3y" secondAttribute="trailing" id="XwY-pF-92V"/>
+                            <constraint firstItem="tzY-29-gio" firstAttribute="bottom" secondItem="sAh-BN-w3y" secondAttribute="bottom" id="YbC-9S-CPI"/>
+                            <constraint firstItem="sAh-BN-w3y" firstAttribute="leading" secondItem="tzY-29-gio" secondAttribute="leading" id="oab-Pv-j6H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tzY-29-gio"/>
+                    </view>
+                    <connections>
+                        <outlet property="yearTableView" destination="sAh-BN-w3y" id="pXc-aK-I24"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLP-3i-Cai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-712" y="35"/>
+        </scene>
+    </scenes>
+</document>
